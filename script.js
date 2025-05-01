@@ -1,10 +1,13 @@
 // Scroll Animation
 document.addEventListener('DOMContentLoaded', function() {
-    const sections = document.querySelectorAll('.about, .services, .contact');
+    // Select all sections except the navbar
+    const sections = document.querySelectorAll('section:not(.navbar), .about, .services, .contact');
     
     // Initially hide all sections
     sections.forEach(section => {
-        section.classList.add('hidden');
+        if (!section.classList.contains('navbar')) {
+            section.classList.add('hidden');
+        }
     });
 
     const observerOptions = {
@@ -15,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-            if (entry.isIntersecting) {
+            if (entry.isIntersecting && !entry.target.classList.contains('navbar')) {
                 entry.target.classList.remove('hidden');
                 // Once a section is visible, we can unobserve it
                 observer.unobserve(entry.target);
@@ -24,7 +27,9 @@ document.addEventListener('DOMContentLoaded', function() {
     }, observerOptions);
 
     sections.forEach(section => {
-        observer.observe(section);
+        if (!section.classList.contains('navbar')) {
+            observer.observe(section);
+        }
     });
 });
 
