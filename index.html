@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бизнес MVP</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">MyVent!</div>
+            <ul class="nav-links">
+                <li><a href="#home">Главная</a></li>
+                <li><a href="#about">О нас</a></li>
+                <li><a href="#services">Услуги</a></li>
+                <li><a href="#contact">Контакты</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-image"></div>
+        <div class="hero-content">
+            <h1><span class="typing-text">MyVent!</span></h1>
+            <p>Праздники - Это просто!</p>
+            <a href="#contact" class="cta-button">Хочу праздник!</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>О нас</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Наша платформа — это удобный и надёжный способ организовать любое событие: от волшебного детского дня рождения до стильной вечеринки для взрослых. Мы собрали на одной площадке лучших аниматоров, ведущих, декораторов, кейтеринг, локации и всё, что нужно для яркого, по-настоящему персонального торжества.</p>
+                </div>
+                <div class="about-image">
+                    <img src="birthday party.jpg" alt="О нас">
+                </div>
+            </div>
+            <div class="about-content reverse">
+                <div class="about-image">
+                    <img src="birthday party-2.jpg"">
+                </div>
+                <div class="about-text">
+                    <p>Вы устали часами искать подходящую организацию для проведения праздника?
+                        Сотни сайтов, десятки звонков, бесконечные переписки — и всё ради одного весёлого дня?
+                        
+                        Мы создали платформу, которая избавит вас от этой головной боли.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Наши услуги</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i>🎉</i>
+                    <h3>Вы выбираете — мы воплощаем.</h3>
+                    <p>Хочется пиратов, супергероев, квизы, фуршет или выездной квест? Просто опишите свою идею, а мы подберём идеальный сценарий и команду.</p>
+                </div>
+                <div class="service-card">
+                    <i>👨‍👩‍👧‍👦</i>
+                    <h3>Для детей и взрослых.</h3>
+                    <p>У нас одинаково серьёзный подход как к детским праздникам, так и к взрослым мероприятиям — потому что радость не имеет возраста.</p>
+                </div>
+                <div class="service-card">
+                    <i>📲</i>
+                    <h3>Онлайн — быстро и просто.</h3>
+                    <p>Мы заказываем такси и еду в два клика. Почему бы не делать так же с праздниками? На нашей платформе вы можете собрать событие мечты всего за несколько минут.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Info Section -->
+    <section id="info" class="info">
+        <div class="container">
+            <h2>Почему выбирают нас</h2>
+            <div class="info-grid">
+                <div class="info-card">
+                    <i>⭐</i>
+                    <h3>Профессиональная команда</h3>
+                    <p>Наши аниматоры и ведущие проходят строгий отбор и регулярное обучение. Каждый специалист имеет множество положительных отзывов.</p>
+                </div>
+                <div class="info-card">
+                    <i>🎯</i>
+                    <h3>Индивидуальный подход</h3>
+                    <p>Мы не используем шаблонные сценарии. Каждое мероприятие разрабатывается с учётом ваших пожеланий, возраста гостей и особенностей локации.</p>
+                </div>
+                <div class="info-card">
+                    <i>🛡️</i>
+                    <h3>Гарантия качества</h3>
+                    <p>Все наши услуги застрахованы. Мы несём полную ответственность за организацию мероприятия и всегда готовы помочь в любой ситуации.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Свяжитесь с нами</h2>
+            <div class="contact-content">
+                <form class="contact-form">
+                    <input type="text" placeholder="Имя" required>
+                    <input type="email" placeholder="Email" required>
+                    <textarea placeholder="Сообщение" required></textarea>
+                    <button type="submit" class="cta-button">Отправить сообщение</button>
+                </form>
+                <div class="contact-info">
+                    <!-- <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>ул. Бизнес, 123, Город, Страна</p>
+                    </div> -->
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <p>+7 708 973 07 06</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>MyVentOrg@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">MyVent!</div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 MyVent!. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
