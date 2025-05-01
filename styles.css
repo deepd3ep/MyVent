@@ -95,7 +95,7 @@ p {
 .hero {
     position: relative;
     color: #fff;
-    height: 80vh;
+    height: 100vh;
     text-align: center;
     overflow: hidden;
     display: flex;
