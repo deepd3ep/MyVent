@@ -33,7 +33,18 @@ const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
 
 hamburger.addEventListener('click', () => {
-    navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+    hamburger.classList.toggle('active');
+    navLinks.classList.toggle('active');
+});
+
+// Close mobile menu when clicking outside
+document.addEventListener('click', (e) => {
+    if (window.innerWidth <= 768 && 
+        !hamburger.contains(e.target) && 
+        !navLinks.contains(e.target)) {
+        hamburger.classList.remove('active');
+        navLinks.classList.remove('active');
+    }
 });
 
 // Smooth Scrolling for Navigation Links
@@ -47,7 +58,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             });
             // Close mobile menu if open
             if (window.innerWidth <= 768) {
-                navLinks.style.display = 'none';
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
             }
         }
     });
@@ -62,4 +74,21 @@ if (contactForm) {
         alert('Thank you for your message! We will get back to you soon.');
         this.reset();
     });
-} 
+}
+
+// Prevent scroll when mobile menu is open
+function preventScroll(e) {
+    if (window.innerWidth <= 768 && navLinks.classList.contains('active')) {
+        e.preventDefault();
+    }
+}
+
+// Add touch event listeners for better mobile interaction
+document.addEventListener('touchstart', function(e) {
+    if (window.innerWidth <= 768 && 
+        !hamburger.contains(e.target) && 
+        !navLinks.contains(e.target)) {
+        hamburger.classList.remove('active');
+        navLinks.classList.remove('active');
+    }
+}, { passive: true }); 
